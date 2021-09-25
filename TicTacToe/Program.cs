@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace TicTacToe
 {
-    class Program
+    internal class Program
     {
-        static void Main()
+        private static void Main()
         {
             bool isRunning = true;
             List<string> menuItems = new List<string>()
@@ -14,7 +14,7 @@ namespace TicTacToe
                 "1 - Start game (for 1 player)",
                 "2 - Start game (for 2 players)",
                 "0 - Exit",
-                "Your choice: "
+                "Your choice: ",
             };
 
             do
@@ -41,8 +41,8 @@ namespace TicTacToe
                         new Game().StartGame(2);
                         break;
                 }
-
-            } while (isRunning);
+            }
+            while (isRunning);
         }
     }
 }
